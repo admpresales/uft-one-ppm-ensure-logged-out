@@ -12,7 +12,7 @@ DevelopTool=AQT
 
 [Actions]
 Action0=Action0\Script.mts
-PPMProposalInitiation=Action1\Script.mts
+PPMEnsureLoggedOut=Action1\Script.mts
 
 [VuserProfiles]
 Profiles=Default Profile
@@ -35,12 +35,19 @@ ProductName=Micro Focus Unified Functional Testing
 Version=15.0.1
 
 [TulipAddins]
+AgGrid=
 AI=
+ASPAjax=
 Database=
+Dojo=
+ExtJS=
 File Content=
+GWT=
 Insight=
+jQueryUI=
 Windows Applications=
 TEA=
+UIGrid=
 Web=
 XML=
 

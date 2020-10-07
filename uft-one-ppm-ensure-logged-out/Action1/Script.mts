@@ -1,25 +1,10 @@
 ﻿'===========================================================
 '20201001 - Initial creation
+'20201007 - Renamed action
+'			Removed unused function
+'			Cleaned up OR of unused objects
+'			Cleaned up OR names
 '===========================================================
-
-'===========================================================
-'Function to Create a Random Number with DateTime Stamp
-'===========================================================
-Function fnRandomNumberWithDateTimeStamp()
-
-'Find out the current date and time
-Dim sDate : sDate = Day(Now)
-Dim sMonth : sMonth = Month(Now)
-Dim sYear : sYear = Year(Now)
-Dim sHour : sHour = Hour(Now)
-Dim sMinute : sMinute = Minute(Now)
-Dim sSecond : sSecond = Second(Now)
-
-'Create Random Number
-fnRandomNumberWithDateTimeStamp = Int(sDate & sMonth & sYear & sHour & sMinute & sSecond)
-
-'======================== End Function =====================
-End Function
 
 Dim BrowserExecutable
 
@@ -44,7 +29,7 @@ AIUtil.SetContext AppContext																'Tell the AI engine to point at the 
 'BP:  Logout if option is available to logout
 '===========================================================================================
 If AIUtil("search").Exist(1) Then
-	Browser("Create New PFM - Proposal").Page("Req #42952: Details").WebElement("menuUserIcon").Click
+	Browser("PPM").Page("PPM Main Page").WebElement("menuUserIcon").Click
 	AppContext.Sync																				'Wait for the browser to stop spinning
 	AIUtil.FindText("Sign Out (").Click
 	AppContext.Sync																				'Wait for the browser to stop spinning

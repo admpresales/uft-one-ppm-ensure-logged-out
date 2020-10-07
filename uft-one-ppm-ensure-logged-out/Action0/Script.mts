@@ -1,1 +1,1 @@
-﻿RunAction "PPMProposalInitiation", oneIteration
+﻿RunAction "PPMEnsureLoggedOut", oneIteration
