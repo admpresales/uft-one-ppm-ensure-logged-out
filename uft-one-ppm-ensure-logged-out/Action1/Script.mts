@@ -4,9 +4,14 @@
 '			Removed unused function
 '			Cleaned up OR of unused objects
 '			Cleaned up OR names
+'20210209 - DJ: Updated to start the mediaserver service on the UFT One host machine if it isn't running
 '===========================================================
 
-Dim BrowserExecutable
+Dim BrowserExecutable, oShell
+
+Set oShell = CreateObject ("WSCript.shell")
+oShell.run "powershell -command ""Start-Service mediaserver"""
+Set oShell = Nothing
 
 While Browser("CreationTime:=0").Exist(0)   												'Loop to close all open browsers
 	Browser("CreationTime:=0").Close 
